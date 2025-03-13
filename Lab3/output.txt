@@ -1,0 +1,30 @@
+Edit View
+1. Đọc và ghi dữ liệu từ file:
+1 File View
+- Viết chương trình sử dụng FilelnputStream và FileOutputStream để đọc nội dung từ một file văn bản và ghi nội dung đó vào 1 file khác
+2. Đọc dữ liệu từ bàn phím và ghi vào file:
+- Viết chương trình sử dụng BufferedReader để đọc dự liệu từ bàn phím và lưu vào file.
+3. Tính số dòng trong một file.
+Viết chương trình sử dụng BufferedReader để đọc một file văn bản và đếm số dòng trong file.
+4. Ghi danh sách số nguyên vào file và đọc lại:
+Viết chương trình sử dụng DataOutputStream để ghi danh sách số nguyên vào file, sau đó sử dụng DataInputStream để đọc lại các số này.
+5. Liệt kê tất cả các file trong một thư mục:
+Viết chương trình sử dụng lớp File để liệt kê tất cả các file trong một thư mục được chỉ. định.
+6. Yêu cầu:
+Viết chương trình đọc nội dung từ nhiều file văn bản (vị dụ: input1.txt, input2 txt...) bằng cách sử dụng các luồng riêng biệt (threads).
+Ghi nội dung của tất cả các file này vào một file tổng hợp (vì dụ: output.txt) theo thứ tự.
+Giải pháp:
+Chương trình dưới đây sử dụng Thread để thực hiện việc đọc file song song, đồng thời sử dụng cơ chế đồng bộ hóa (synchronized) để đảm bảo ghi dữ liệu vào file đầu ra không bị xung đột.
+7. Đọc file lớn bằng nhiều luồng (Multi-threaded File Reading)
+Mô tả
+Viết chương trình chia một file lớn thành các phần nhỏ và sử dụng nhiều luồng để đọc đồng thời các phần này. Sau khi đọc xong, ghép lại nội dung theo đúng thứ tự ban đầu.
+Hướng dẫn:
+Chia file thành các đoạn dựa trên kích thước (ví dụ: mỗi đoạn 1MB). Mỗi luồng đọc một đoạn từ file bằng cách sử dụng Random AccessFile.
+Ghi kết quả vào một file khác theo thứ tự ban đầu.
+8. Tìm kiếm từ khóa trong nhiều file bằng đa luồng
+Mô tả:
+Viết chương trình tìm kiếm một từ khóa trong một danh sách các file. Mỗi luồng xử lý một file và trả về số lần xuất hiện của từ khóa trong file đó.
+Hướng dẫn:
+Sử dụng Thread hoặc ExecutorService để tạo các luồng. 
+Đọc từng file và đếm số lần xuất hiện của từ khóa.
+Tổng hợp kết quả từ tất cả các luồng.
