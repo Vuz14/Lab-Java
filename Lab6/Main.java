@@ -20,7 +20,7 @@ public class Main {
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
-        // UI components
+        // Lab7.Bai1.UI components
         JLabel customerIdLabel = new JLabel("Customer ID:");
         customerIdField = new JTextField(20);
         JLabel productIdLabel = new JLabel("Product ID:");
