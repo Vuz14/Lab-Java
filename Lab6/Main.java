@@ -16,20 +16,20 @@ public class Main {
     private JTextArea orderHistoryTextArea;
 
     public Main() {
-        frame = new JFrame("Order Management");
+        frame = new JFrame("Lab8.Order Management");
         frame.setSize(800, 600);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 
         // Lab7.Bai1.UI components
-        JLabel customerIdLabel = new JLabel("Customer ID:");
+        JLabel customerIdLabel = new JLabel("Lab8.Customer ID:");
         customerIdField = new JTextField(20);
-        JLabel productIdLabel = new JLabel("Product ID:");
+        JLabel productIdLabel = new JLabel("Lab8.Product ID:");
         productIdField = new JTextField(20);
         JLabel quantityLabel = new JLabel("Quantity:");
         quantityField = new JTextField(20);
 
-        JButton addOrderButton = new JButton("Add Order");
-        JButton viewHistoryButton = new JButton("View Order History");
+        JButton addOrderButton = new JButton("Add Lab8.Order");
+        JButton viewHistoryButton = new JButton("View Lab8.Order History");
         JButton calculateTotalButton = new JButton("Calculate Total");
 
         // JTextArea để hiển thị lịch sử đơn hàng
@@ -50,7 +50,7 @@ public class Main {
         panel.add(calculateTotalButton);
 
 
-        // Order table
+        // Lab8.Order table
         orderTable = new JTable(new OrderTableModel(orders));
         JScrollPane scrollPane = new JScrollPane(orderTable);
 
@@ -108,7 +108,7 @@ public class Main {
             OrderDao orderDAO = new OrderDao();
             orderDAO.addOrder(customerId, productId, quantity);
 
-            JOptionPane.showMessageDialog(frame, "Order added successfully!");
+            JOptionPane.showMessageDialog(frame, "Lab8.Order added successfully!");
 
             // Xóa nội dung các trường nhập sau khi thêm đơn hàng thành công
             customerIdField.setText("");
@@ -140,12 +140,12 @@ public class Main {
     
     private void calculateTotal() {
         // Calculate total price for an order
-        int orderId = Integer.parseInt(JOptionPane.showInputDialog("Enter Order ID:"));
+        int orderId = Integer.parseInt(JOptionPane.showInputDialog("Enter Lab8.Order ID:"));
         OrderDao orderDAO = new OrderDao();
         double total = orderDAO.calculateOrderTotal(orderId);
 
         // Display total price
-        JOptionPane.showMessageDialog(frame, "Total Order Amount: " + total);
+        JOptionPane.showMessageDialog(frame, "Total Lab8.Order Amount: " + total);
     }
 
 

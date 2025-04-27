@@ -6,7 +6,7 @@ import java.util.List;
 
 public class OrderTableModel extends AbstractTableModel {
     private List<Order> orders;
-    private String[] columns = {"Order ID", "Customer ID", "Total"};
+    private String[] columns = {"Lab8.Order ID", "Lab8.Customer ID", "Total"};
 
     public OrderTableModel(List<Order> orders) {
         this.orders = (orders != null) ? orders : new ArrayList<>();

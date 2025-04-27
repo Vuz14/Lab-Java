@@ -79,7 +79,7 @@ public class OrderDao {
                 int orderId = rs.getInt("order_id");
                 int productId = rs.getInt("product_id");
                 int quantity = rs.getInt("quantity");
-                orderHistory.append("Order ID: ").append(orderId).append(", Product ID: ").append(productId)
+                orderHistory.append("Lab8.Order ID: ").append(orderId).append(", Lab8.Product ID: ").append(productId)
                         .append(", Quantity: ").append(quantity).append("\n");
             }
         } catch (SQLException e) {
